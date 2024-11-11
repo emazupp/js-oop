@@ -17,6 +17,13 @@ class Veicolo {
 
   calcolaEta() {
     const currentDate = new Date();
-    console.log(currentDate.getFullYear());
+    const year = currentDate.getFullYear() - this.anno;
+    if (year > 1) {
+      console.log(`Questa ${this.marca} ha ${year} anni`);
+    } else if (year == 1) {
+      console.log(`Questa ${this.marca} ha 1 anno`);
+    } else {
+      console.log(`Questa ${this.marca} ha meno di 1 anno`);
+    }
   }
 }
